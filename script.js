@@ -197,7 +197,7 @@ async function registerUser() {
             phone : ph,
         };
         
-        await makeRequest(url+'.json', 'PUT', updateData)
+        await makeRequest(url+ph+'.json', 'PUT', updateData)
             .then(response => console.log("PUT Response:", response))
             .catch(error => console.error("Error:", error));
 
