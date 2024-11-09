@@ -1,0 +1,86 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(39, 241, 241);
+
+}
+
+.top-cnt{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+/* 
+.top{
+    width: 50%;
+    font-size: 2rem;
+} */
+
+.rule{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.top {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 0 auto;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+  }
+  
+  /* Media queries for additional responsiveness */
+  @media (max-width: 768px) {
+    .top {
+      padding: 8px 12px;
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+
+
+
+  .try {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;  /* Centers the button horizontally */
+    align-items: center;      /* Centers the button vertically */
+}
+
+.try button {
+    background-color: #4CAF50;  /* Green background color */
+    color: white;               /* White text color */
+    padding: 12px 24px;         /* Padding for a larger button */
+    font-size: 16px;            /* Font size */
+    border: none;               /* Remove default border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.try button:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+
+
+
+  
+  @media (max-width: 480px) {
+    .top {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+

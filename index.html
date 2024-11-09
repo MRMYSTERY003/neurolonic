@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-container .icon {
+            background: #1a202c;
+            border-radius: 50%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .login-container .icon i {
+            color: white;
+            font-size: 2rem;
+        }
+        .login-container input {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            color: #1a202c;
+        }
+        .login-container input::placeholder {
+            color: #1a202c;
+        }
+        .login-container .options {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+        .login-container .login-button {
+            margin-top: 5px;
+            background: #1a202c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem;
+            width: 100%;
+            cursor: pointer;
+        }
+        .login-container .register-link {
+            margin-top: 1rem;
+            color: #1a202c;
+            cursor: pointer;
+        }
+
+        .logo{
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;   
+        }
+
+        .logo-img{
+            height: 20%;
+            width: 20%;
+
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;   
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="logo.png" alt="" class="logo-img">
+        </div>
+        <div class="icon">
+            <i class="fas fa-user"></i>
+        </div>
+
+
+                <!-- Privacy Policy Modal -->
+        <div id="privacyModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Privacy Policy</h2>
+                <p>Welcome to Neuralonic! Please review our privacy policy before registering.</p>
+                <ul>
+                    <li><strong>Data Collection and Use:</strong> Your audio recordings and emotion analyses are securely stored and used exclusively for providing insights.</li>
+                    <li><strong>Data Privacy:</strong> We do not share your data with third parties. All personal data remains confidential.</li>
+                    <li><strong>Professional Access After Launch:</strong> Certified professionals may review data for support, only with your consent.</li>
+                    <li><strong>Security Measures:</strong> We employ strong encryption and privacy safeguards to protect your data.</li>
+                </ul>
+                <button id="agreeButton" class="login-button">Agree and Continue</button>
+            </div>
+        </div>
+
+
+
+        <input type="text" id="uname" placeholder="Username" style="display: none;">
+        <input type="tel" id="ph" placeholder="Phone" style="display: none;">
+        <input type="text" id="email" placeholder="Email ID">
+        <input type="password" id="password" placeholder="Password">
+        <div class="options">
+            <a href="#" id="new-user" class="text-sm">New User</a>
+        </div>
+        <button class="login-button" id = 'login'>LOGIN</button>
+        <button class="login-button" id = 'register' style="display: none;">Register</button>
+    </div>
+    <script src="script.js" type="module"></script>
+
+</body>
+</html>

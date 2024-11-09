@@ -1,0 +1,99 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+    Neuralonic
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body class="bg-blue-50">
+
+    <div class="top-cnt">
+        <div class="top">
+        Welcome to Neuralonic!
+        With this web application, you can quickly check in on your emotions and mental state. Here’s a step-by-step guide:
+        </div>
+    </div>
+    <div class="rule">
+      <div class="flex justify-center items-center">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <!-- Step 1 -->
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <div class="text-3xl font-bold text-blue-800 mb-4">01</div>
+                  <div class="text-xl font-bold text-blue-800 mb-4">Upload a Pre-recorded Voice File</div>
+                  <p class="text-gray-600">
+                      <li>Click on the "Upload" button.</li>
+                      <li>Select an audio file (e.g., .wav or .mp3 format) from your device.</li>
+                      <li>Wait for the file to upload and process. The website will display the predicted emotion.</li>
+                  </p>
+              </div>
+  
+              <!-- Step 2 -->
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <div class="text-3xl font-bold text-blue-800 mb-4">02</div>
+                  <div class="text-xl font-bold text-blue-800 mb-4">Record Live Speech</div>
+                  <p class="text-gray-600">
+                      <li>Click on the "Record" button to start recording.</li>
+                      <li>Speak clearly into your device’s microphone.</li>
+                      <li>When you finish speaking, click on the "Stop" button.</li>
+                      <li>The recording will automatically be processed, and the predicted emotion will be displayed.</li>
+                  </p>
+              </div>
+  
+              <!-- Step 3 -->
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <div class="text-3xl font-bold text-blue-800 mb-4">03</div>
+                  <div class="text-xl font-bold text-blue-800 mb-4">Understanding the Results</div>
+                  <p class="text-gray-600">
+                      The website will display a predicted emotion (e.g., Happy, Sad, Angry) based on your voice input.
+                  </p>
+              </div>
+  
+              <!-- Step 4 -->
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                  <div class="text-3xl font-bold text-blue-800 mb-4">04</div>
+                  <div class="text-xl font-bold text-blue-800 mb-4">Troubleshooting</div>
+                  <p class="text-gray-600">
+                      <li>If your microphone isn’t working, make sure it’s enabled in your device settings.</li>
+                      <li>Ensure you have a stable internet connection to process the audio files.</li>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="try">
+    <button id = 'try'>Try Now</button>
+  </div>
+ 
+  <script>
+    
+    // Get the current URL
+    const url = new URL(window.location.href);
+
+    // Get the value of the 't' parameter
+    const tValue = url.searchParams.get("t");
+
+    console.log("Value of t:", tValue); // Should print "102928384756"
+
+    var url_web = "https://1bd8-16-171-145-25.ngrok-free.app/?val=";
+
+    const btn = document.getElementById("try");
+    btn.addEventListener("click", ()=>{
+        console.log(url_web+tValue)
+        window.location.href = url_web+tValue;
+    })
+
+
+  </script>
+
+
+ </body>
+
+
+</html>
